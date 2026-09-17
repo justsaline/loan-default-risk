@@ -29,3 +29,9 @@ c. Test data to test the fine tuned model with a threshold to check for predicti
 **Inference** : Based on the model's performance, we checked on the validation set, we have to choose the best threshold to predict the classes. Based on the confusion matrix we can clearly see that the best threshold is 0.1, in a range of 0.1 to 1.0 (0.1 intervals)
 
 > *Applying this 0.1 threshold to the untouched Test Set resulted in 95 False Positives, 4 False Negatives, and a final business cost of 115.*
+
+2. **Random Forest:** Using a random forest classifier to capture more complex, non-linear patterns in the provided applicant data to split them into classes 1 (Bad) and 2 (Good).
+
+**Inference :** Based on the model's performance, we checked on the validation set to choose the best threshold. Based on the confusion matrix and our custom penalty matrix (1:5 ratio), we can clearly see that the best threshold is 0.2, in a range of 0.1 to 1.0 (0.1 intervals).
+
+> Applying this 0.2 threshold to the untouched Test Set resulted in 80 False Positives, 6 False Negatives, and a final business cost of 110 (outperforming the baseline).
